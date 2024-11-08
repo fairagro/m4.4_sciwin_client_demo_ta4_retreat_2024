@@ -15,11 +15,12 @@ prepare_folder:
 	@python -m venv .venv
 	@.venv/bin/pip install -r requirements.txt
 	@echo "export PATH=\$$PATH:~/m4.4_sciwin_client/target/debug\nsource .venv/bin/activate" > set_env.sh
-	@echo "Run 'source set_env.sh' to apply the changes to the current shell."
+	@echo "\n\n\033[0;32mRun 'source set_env.sh' to apply the changes to the current shell.\033[0m'"
 
 all: prepare_folder
 
 clean:
-	rm -rf .git
-	mv _.git .git
-	@find . -mindepth 1 ! -name 'Makefile' ! -name 'Readme.md' ! -name '.git' ! -path './.git' -exec rm -rf {} +
+	@rm -rf .git
+	@mv _.git .git
+	@find . -mindepth 1 \( -name 'Makefile' -o -name 'Readme.md' -o -path './.git' -prune \) -o -exec rm -rf {} +
+
