@@ -22,4 +22,4 @@ all: prepare_folder
 clean:
 	rm -rf .git
 	mv _.git .git
-	@find . -mindepth 1 ! -name 'Makefile' ! -name 'Readme.md' ! -path '.git' -exec rm -rf {} +
+	@find . -mindepth 1 ! -name 'Makefile' ! -name 'Readme.md' !-name '.git' ! -path './.git' -exec rm -rf {} +
