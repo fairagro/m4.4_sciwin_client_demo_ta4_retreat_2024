@@ -124,9 +124,6 @@ or `s4n execute workflows/demo/demo.cwl --pop population.csv --speakers speakers
 
 
 ### Execution with SciWIn
-> [!IMPORTANT]
-> You will currently need to be in the `feature/execution` branch for that!
-
 The command is `s4n execute local` which can be shortened by `s4n ex l`
 #### Execution of CommandLineTools
 You can execute CWL CommandLineTools in a custom runner on all major systems (Windows, Mac, Linux). The custom runner does not support containerization yet, so you need to make sure all required tools are available. The runner is work in progress!
