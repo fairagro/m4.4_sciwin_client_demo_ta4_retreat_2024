@@ -19,7 +19,8 @@ make clean
 
 ## Demo Commands
 To check if SciWIn is available type `s4n --version` which should output something like `s4n 0.1.0`.
-
+### Initializing a Project
+To begin the journey use `s4n init -p .` to initialize a project in the current directory.
 ### Creation of CommandLineTools
 To create the two CommandLineTools needed for the demo you just have to prefix the execution commands with `s4n tool create` or `s4n run`.
 #### Calculation
