@@ -4,6 +4,7 @@ FILES = \
 	population.csv \
 	requirements.txt \
 	.gitignore \
+	remote_data/speakers.csv \
 	remote_data/speakers_revised.csv
 BASE_URL = https://raw.githubusercontent.com/fairagro/m4.4_hello_world/refs/heads/master
 

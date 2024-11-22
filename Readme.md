@@ -29,12 +29,12 @@ To create the two CommandLineTools needed for the demo you just have to prefix t
 #### Calculation
 To create the `calculation.cwl` tool run the following command:
 ```bash
-s4n run python calculation.py --population population.csv --speakers speakers_revised.csv
+s4n run python calculation.py --population population.csv --speakers speakers.csv
 ```
 which will output
 ```
 📂 The current working directory is /home/ubuntu/sciwin_test
-▶️  Executing command: python calculation.py --population population.csv --speakers speakers_revised.csv
+▶️  Executing command: python calculation.py --population population.csv --speakers speakers.csv
 Total population: 7694245029
             language    speakers  percentage
 0             Bangla   300000000    3.899018
@@ -68,6 +68,54 @@ which will lead to the following output:
 
 📄 Created CWL file workflows/plot/plot.cwl
 ```
+
+### Execution with SciWIn
+The command is `s4n execute local` which can be shortened by `s4n ex l`
+#### Execution of CommandLineTools
+You can execute CWL CommandLineTools in a custom runner on all major systems (Windows, Mac, Linux). The custom runner does not support containerization yet, so you need to make sure all required tools are available. The runner is work in progress!
+##### Execution with no arguments
+SciWIn client adds defaults to your tools so you can just rerun the cwl without any parameters:
+```
+s4n ex l workflows/plot/plot.cwl 
+```
+Outputs:
+```
+💻 Executing workflows/plot/plot.cwl using SciWIn's custom runner. Use `--runner cwltool` to use reference runner (if installed). SciWIn's runner currently only supports 'CommandLineTools'!
+📁 Created staging directory: "/tmp/.tmph9kGRs"
+⏳ Executing Command: `python plot.py --results /tmp/.tmph9kGRs/results.csv`
+📜 Wrote output file: "/home/ubuntu/sciwin_test/results.svg"
+{
+  "results": {
+    "location": "file:///home/ubuntu/sciwin_test/results.svg",
+    "basename": "results",
+    "class": "File",
+    "checksum": "sha1$91e864f57d592c85ab3d4ef52162f3d05e5477aa",
+    "size": 72865,
+    "path": "/home/ubuntu/sciwin_test/results.svg"
+  }
+}
+✔️  Command Executed with status: success!
+```
+
+##### Execution with arguments
+You may need to change the arguments provided in CWL. You can either do this by giving the arguments appended to the command or use an input yaml file:
+```yml
+population:
+  class: File
+  location: population.csv
+speakers:
+  class: File
+  location: speakers_revised.csv
+```
+```bash
+s4n ex l workflows/calculation/calculation.cwl inputs.yml 
+```
+or give the separated arguments
+```bash
+s4n ex l workflows/calculation/calculation.cwl --speakers speakers_revised.csv --population population.csv 
+```
+
+
 ### Workflow Creation
 #### Workflow Creation
 To create a Workflow with name `demo` simply call 
@@ -123,50 +171,3 @@ We now have a full workflow which can be executed by cwltool
 cwltool workflows/demo/demo.cwl --pop population.csv --speakers speakers_revised.csv
 ```
 or `s4n execute workflows/demo/demo.cwl --pop population.csv --speakers speakers_revised.csv` in a later stage (execution branch currently only supports commandlinetools)
-
-
-### Execution with SciWIn
-The command is `s4n execute local` which can be shortened by `s4n ex l`
-#### Execution of CommandLineTools
-You can execute CWL CommandLineTools in a custom runner on all major systems (Windows, Mac, Linux). The custom runner does not support containerization yet, so you need to make sure all required tools are available. The runner is work in progress!
-##### Execution with no arguments
-SciWIn client adds defaults to your tools so you can just rerun the cwl without any parameters:
-```
-s4n ex l workflows/plot/plot.cwl 
-```
-Outputs:
-```
-💻 Executing workflows/plot/plot.cwl using SciWIn's custom runner. Use `--runner cwltool` to use reference runner (if installed). SciWIn's runner currently only supports 'CommandLineTools'!
-📁 Created staging directory: "/tmp/.tmph9kGRs"
-⏳ Executing Command: `python plot.py --results /tmp/.tmph9kGRs/results.csv`
-📜 Wrote output file: "/home/ubuntu/sciwin_test/results.svg"
-{
-  "results": {
-    "location": "file:///home/ubuntu/sciwin_test/results.svg",
-    "basename": "results",
-    "class": "File",
-    "checksum": "sha1$91e864f57d592c85ab3d4ef52162f3d05e5477aa",
-    "size": 72865,
-    "path": "/home/ubuntu/sciwin_test/results.svg"
-  }
-}
-✔️  Command Executed with status: success!
-```
-
-##### Execution with arguments
-You may need to change the arguments provided in CWL. You can either do this by giving the arguments appended to the command or use an input yaml file:
-```yml
-population:
-  class: File
-  location: population.csv
-speakers:
-  class: File
-  location: speakers_revised.csv
-```
-```bash
-s4n ex l workflows/calculation/calculation.cwl inputs.yml 
-```
-or give the separated arguments
-```bash
-s4n ex l workflows/calculation/calculation.cwl --speakers speakers_revised.csv --population population.csv 
-```
