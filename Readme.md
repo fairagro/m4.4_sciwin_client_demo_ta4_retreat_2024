@@ -166,6 +166,11 @@ which outputs
 ✔️  Updated Workflow workflows/demo/demo.cwl!
 ```
 
+To commit a simple call is needed:
+```bash
+s4n workflow save demo
+```
+
 We now have a full workflow which can be executed by cwltool
 ```bash
 s4n execute local --runner cwltool workflows/demo/demo.cwl --pop population.csv --speakers speakers_revised.csv
