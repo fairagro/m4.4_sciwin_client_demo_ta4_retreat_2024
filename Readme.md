@@ -29,7 +29,7 @@ To create the two CommandLineTools needed for the demo you just have to prefix t
 #### Calculation
 To create the `calculation.cwl` tool run the following command:
 ```bash
-s4n run python calculation.py --population population.csv --speakers speakers.csv
+s4n tool create python calculation.py --population population.csv --speakers speakers.csv
 ```
 which will output something like
 ```
@@ -85,7 +85,7 @@ speakers:
   location: speakers_revised.csv
 ```
 ```bash
-s4n ex l workflows/calculation/calculation.cwl inputs.yml 
+s4n execute local workflows/calculation/calculation.cwl inputs.yml 
 ```
 or give the separated arguments
 ```bash
