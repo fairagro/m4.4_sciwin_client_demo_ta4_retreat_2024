@@ -2,7 +2,7 @@
 This repo contains the scripts to perform a small SciWIn-Client Demo. This instructions file will be updated to use new features when they are available. The commands stated below will perform the operations based on our [hello world repo](https://github.com/fairagro/m4.4_hello_world).
 
 ## Preparation and Cleanup
-To prepare the environment and to download all neccessary files you just need to execute the `Makefile`
+To prepare the environment and to download all neccessary files you just need to execute the `Makefile` (maybe adjust `s4n` location before)
 ```bash
 make
 ```
