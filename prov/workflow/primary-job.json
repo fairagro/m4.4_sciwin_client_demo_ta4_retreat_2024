@@ -1,0 +1,20 @@
+{
+    "population": {
+        "class": "File",
+        "location": "../data/84/84b9f7c851521b1396f1ff2dd45e7d88e8803b1f",
+        "size": 3602,
+        "basename": "population.csv",
+        "nameroot": "population",
+        "nameext": ".csv",
+        "checksum": "sha1$84b9f7c851521b1396f1ff2dd45e7d88e8803b1f"
+    },
+    "speakers": {
+        "class": "File",
+        "location": "../data/e1/e127d38db33186883b2508127a32058068978e19",
+        "size": 223,
+        "basename": "speakers_revised.csv",
+        "nameroot": "speakers_revised",
+        "nameext": ".csv",
+        "checksum": "sha1$e127d38db33186883b2508127a32058068978e19"
+    }
+}

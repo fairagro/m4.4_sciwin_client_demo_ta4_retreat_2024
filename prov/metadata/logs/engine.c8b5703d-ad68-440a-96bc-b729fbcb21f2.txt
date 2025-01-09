@@ -1,0 +1,26 @@
+[2025-01-09T07:55:24,29.000000Z] [cwltool] /home/ubuntu/.local/bin/cwltool --provenance prov workflows/demo/demo.cwl inputs.yml
+[2025-01-09T07:55:24,33.000000Z] Resolved 'workflows/demo/demo.cwl' to 'file:///home/ubuntu/sciwin_client_demo/workflows/demo/demo.cwl'
+[2025-01-09T07:55:25,29.000000Z] [provenance] Adding to RO file:///home/ubuntu/sciwin_client_demo/population.csv
+[2025-01-09T07:55:25,30.000000Z] [provenance] Adding to RO file:///home/ubuntu/sciwin_client_demo/speakers_revised.csv
+[2025-01-09T07:55:25,32.000000Z] [workflow ] start
+[2025-01-09T07:55:25,32.000000Z] [workflow ] starting step calculation
+[2025-01-09T07:55:25,32.000000Z] [step calculation] start
+[2025-01-09T07:55:25,35.000000Z] [job calculation] /tmp/nngia1_5$ python \
+    calculation.py \
+    --population \
+    /tmp/npl1yn8j/stg3f66b068-bee0-41f9-9e54-e7bd08034ad6/population.csv \
+    --speakers \
+    /tmp/npl1yn8j/stga69ae999-f2a9-4e10-b597-7764bd881fff/speakers_revised.csv
+[2025-01-09T07:55:25,333.000000Z] [job calculation] completed success
+[2025-01-09T07:55:25,333.000000Z] [step calculation] completed success
+[2025-01-09T07:55:25,333.000000Z] [workflow ] starting step plot
+[2025-01-09T07:55:25,333.000000Z] [step plot] start
+[2025-01-09T07:55:25,336.000000Z] [job plot] /tmp/q7k823xq$ python \
+    plot.py \
+    --results \
+    /tmp/uda6kfcd/stg734517a6-f9f4-4530-8d31-e0cf481c1ef8/results.csv
+[2025-01-09T07:55:26,831.000000Z] [job plot] Max memory used: 91MiB
+[2025-01-09T07:55:26,833.000000Z] [job plot] completed success
+[2025-01-09T07:55:26,833.000000Z] [step plot] completed success
+[2025-01-09T07:55:26,833.000000Z] [workflow ] completed success
+[2025-01-09T07:55:26,887.000000Z] Final process status is success
