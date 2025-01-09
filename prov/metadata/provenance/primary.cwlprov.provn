@@ -1,0 +1,64 @@
+document
+  prefix wfprov <http://purl.org/wf4ever/wfprov#>
+  prefix wfdesc <http://purl.org/wf4ever/wfdesc#>
+  prefix cwlprov <https://w3id.org/cwl/prov#>
+  prefix foaf <http://xmlns.com/foaf/0.1/>
+  prefix schema <http://schema.org/>
+  prefix orcid <https://orcid.org/>
+  prefix id <urn:uuid:>
+  prefix data <urn:hash::sha1:>
+  prefix sha256 <nih:sha-256;>
+  prefix researchobject <arcp://uuid,6f892a35-09fe-4fc1-a6dc-2a69fd79dd06/>
+  prefix metadata <arcp://uuid,6f892a35-09fe-4fc1-a6dc-2a69fd79dd06/metadata/>
+  prefix provenance <arcp://uuid,6f892a35-09fe-4fc1-a6dc-2a69fd79dd06/metadata/provenance/>
+  prefix wf <arcp://uuid,6f892a35-09fe-4fc1-a6dc-2a69fd79dd06/workflow/packed.cwl#>
+  prefix input <arcp://uuid,6f892a35-09fe-4fc1-a6dc-2a69fd79dd06/workflow/primary-job.json#>
+  prefix wf4ever <http://purl.org/wf4ever/wf4ever#>
+  
+  agent(id:24e42ee4-9a2d-4603-8d1b-cdb3e4f4d381)
+  agent(id:c8b5703d-ad68-440a-96bc-b729fbcb21f2, [prov:type='wfprov:WorkflowEngine', prov:type='prov:SoftwareAgent', prov:label="cwltool 3.1.20240708091337"])
+  wasStartedBy(id:c8b5703d-ad68-440a-96bc-b729fbcb21f2, -, id:24e42ee4-9a2d-4603-8d1b-cdb3e4f4d381, 2025-01-09T07:55:25.005244)
+  activity(id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06, 2025-01-09T07:55:25.005274, -, [prov:type='wfprov:WorkflowRun', prov:label="Run of workflow/packed.cwl#main"])
+  wasAssociatedWith(id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06, id:c8b5703d-ad68-440a-96bc-b729fbcb21f2, wf:main)
+  wasStartedBy(id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06, -, id:c8b5703d-ad68-440a-96bc-b729fbcb21f2, 2025-01-09T07:55:25.005336)
+  entity(wf:main, [prov:type='prov:Plan', prov:type='wfdesc:Workflow', prov:label="Prospective provenance"])
+  entity(wf:main/plot, [prov:type='wfdesc:Process', prov:type='prov:Plan'])
+  entity(wf:main, [wfdesc:hasSubProcess='wf:main/plot', prov:label="Prospective provenance"])
+  entity(wf:main/calculation, [prov:type='wfdesc:Process', prov:type='prov:Plan'])
+  entity(wf:main, [wfdesc:hasSubProcess='wf:main/calculation', prov:label="Prospective provenance"])
+  entity(data:e127d38db33186883b2508127a32058068978e19, [prov:type='wfprov:Artifact'])
+  entity(id:822a372a-ef3e-44e6-a7ed-eabd663da79e, [prov:type='wfprov:Artifact', prov:type='wf4ever:File', cwlprov:basename="speakers_revised.csv", cwlprov:nameroot="speakers_revised", cwlprov:nameext=".csv"])
+  specializationOf(id:822a372a-ef3e-44e6-a7ed-eabd663da79e, data:e127d38db33186883b2508127a32058068978e19)
+  used(id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06, id:822a372a-ef3e-44e6-a7ed-eabd663da79e, 2025-01-09T07:55:25.032045, [prov:role='wf:main/speakers'])
+  entity(data:84b9f7c851521b1396f1ff2dd45e7d88e8803b1f, [prov:type='wfprov:Artifact'])
+  entity(id:59268825-c83d-4c38-888e-e3ced0adc12b, [prov:type='wfprov:Artifact', prov:type='wf4ever:File', cwlprov:basename="population.csv", cwlprov:nameroot="population", cwlprov:nameext=".csv"])
+  specializationOf(id:59268825-c83d-4c38-888e-e3ced0adc12b, data:84b9f7c851521b1396f1ff2dd45e7d88e8803b1f)
+  used(id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06, id:59268825-c83d-4c38-888e-e3ced0adc12b, 2025-01-09T07:55:25.032424, [prov:role='wf:main/population'])
+  activity(id:6125c404-ad9c-4023-a3d7-7a582355cdf5, -, -, [prov:type='wfprov:ProcessRun', prov:label="Run of workflow/packed.cwl#main/calculation"])
+  wasAssociatedWith(id:6125c404-ad9c-4023-a3d7-7a582355cdf5, id:c8b5703d-ad68-440a-96bc-b729fbcb21f2, wf:main/calculation)
+  wasStartedBy(id:6125c404-ad9c-4023-a3d7-7a582355cdf5, -, id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06, 2025-01-09T07:55:25.035375)
+  entity(data:84b9f7c851521b1396f1ff2dd45e7d88e8803b1f, [prov:type='wfprov:Artifact'])
+  entity(id:cffa36a3-a299-434d-aca2-94460ab35346, [prov:type='wfprov:Artifact', prov:type='wf4ever:File', cwlprov:basename="population.csv", cwlprov:nameroot="population", cwlprov:nameext=".csv"])
+  specializationOf(id:cffa36a3-a299-434d-aca2-94460ab35346, data:84b9f7c851521b1396f1ff2dd45e7d88e8803b1f)
+  used(id:6125c404-ad9c-4023-a3d7-7a582355cdf5, id:cffa36a3-a299-434d-aca2-94460ab35346, 2025-01-09T07:55:25.036178, [prov:role='wf:main/calculation/population'])
+  entity(data:e127d38db33186883b2508127a32058068978e19, [prov:type='wfprov:Artifact'])
+  entity(id:e40b061c-ac6a-4b54-a924-74108ba3b7e9, [prov:type='wfprov:Artifact', prov:type='wf4ever:File', cwlprov:basename="speakers_revised.csv", cwlprov:nameroot="speakers_revised", cwlprov:nameext=".csv"])
+  specializationOf(id:e40b061c-ac6a-4b54-a924-74108ba3b7e9, data:e127d38db33186883b2508127a32058068978e19)
+  used(id:6125c404-ad9c-4023-a3d7-7a582355cdf5, id:e40b061c-ac6a-4b54-a924-74108ba3b7e9, 2025-01-09T07:55:25.036540, [prov:role='wf:main/calculation/speakers'])
+  entity(data:0bbffc95ebeeb5d045800be5f313fdc7e96c6364, [prov:type='wfprov:Artifact'])
+  entity(id:2627c279-cf73-4d33-8412-91f476345eb8, [prov:type='wfprov:Artifact', prov:type='wf4ever:File', cwlprov:basename="results.csv", cwlprov:nameroot="results", cwlprov:nameext=".csv"])
+  specializationOf(id:2627c279-cf73-4d33-8412-91f476345eb8, data:0bbffc95ebeeb5d045800be5f313fdc7e96c6364)
+  wasGeneratedBy(id:2627c279-cf73-4d33-8412-91f476345eb8, id:6125c404-ad9c-4023-a3d7-7a582355cdf5, 2025-01-09T07:55:25.332417, [prov:role='wf:main/calculation/results'])
+  wasEndedBy(id:6125c404-ad9c-4023-a3d7-7a582355cdf5, -, id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06, 2025-01-09T07:55:25.332411)
+  activity(id:ea3f0160-b1d6-4528-82fb-c8100114869a, -, -, [prov:type='wfprov:ProcessRun', prov:label="Run of workflow/packed.cwl#main/plot"])
+  wasAssociatedWith(id:ea3f0160-b1d6-4528-82fb-c8100114869a, id:c8b5703d-ad68-440a-96bc-b729fbcb21f2, wf:main/plot)
+  wasStartedBy(id:ea3f0160-b1d6-4528-82fb-c8100114869a, -, id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06, 2025-01-09T07:55:25.336317)
+  used(id:ea3f0160-b1d6-4528-82fb-c8100114869a, id:2627c279-cf73-4d33-8412-91f476345eb8, 2025-01-09T07:55:25.336768, [prov:role='wf:main/plot/results'])
+  entity(data:1c8014753e14c8a9086cef3cd0e5fa363ab53809, [prov:type='wfprov:Artifact'])
+  entity(id:8b6dcc34-63d7-469a-bef7-5c0b7cdf7980, [prov:type='wfprov:Artifact', prov:type='wf4ever:File', cwlprov:basename="results.svg", cwlprov:nameroot="results", cwlprov:nameext=".svg"])
+  specializationOf(id:8b6dcc34-63d7-469a-bef7-5c0b7cdf7980, data:1c8014753e14c8a9086cef3cd0e5fa363ab53809)
+  wasGeneratedBy(id:8b6dcc34-63d7-469a-bef7-5c0b7cdf7980, id:ea3f0160-b1d6-4528-82fb-c8100114869a, 2025-01-09T07:55:26.832870, [prov:role='wf:main/plot/results'])
+  wasEndedBy(id:ea3f0160-b1d6-4528-82fb-c8100114869a, -, id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06, 2025-01-09T07:55:26.832864)
+  wasGeneratedBy(id:8b6dcc34-63d7-469a-bef7-5c0b7cdf7980, id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06, 2025-01-09T07:55:26.835320, [prov:role='wf:main/primary/out'])
+  wasEndedBy(id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06, -, id:c8b5703d-ad68-440a-96bc-b729fbcb21f2, 2025-01-09T07:55:26.835383)
+endDocument

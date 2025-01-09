@@ -1,0 +1,402 @@
+{
+  "prefix": {
+    "wfprov": "http://purl.org/wf4ever/wfprov#",
+    "wfdesc": "http://purl.org/wf4ever/wfdesc#",
+    "cwlprov": "https://w3id.org/cwl/prov#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "schema": "http://schema.org/",
+    "orcid": "https://orcid.org/",
+    "id": "urn:uuid:",
+    "data": "urn:hash::sha1:",
+    "sha256": "nih:sha-256;",
+    "researchobject": "arcp://uuid,6f892a35-09fe-4fc1-a6dc-2a69fd79dd06/",
+    "metadata": "arcp://uuid,6f892a35-09fe-4fc1-a6dc-2a69fd79dd06/metadata/",
+    "provenance": "arcp://uuid,6f892a35-09fe-4fc1-a6dc-2a69fd79dd06/metadata/provenance/",
+    "wf": "arcp://uuid,6f892a35-09fe-4fc1-a6dc-2a69fd79dd06/workflow/packed.cwl#",
+    "input": "arcp://uuid,6f892a35-09fe-4fc1-a6dc-2a69fd79dd06/workflow/primary-job.json#",
+    "wf4ever": "http://purl.org/wf4ever/wf4ever#"
+  },
+  "agent": {
+    "id:24e42ee4-9a2d-4603-8d1b-cdb3e4f4d381": {},
+    "id:c8b5703d-ad68-440a-96bc-b729fbcb21f2": {
+      "prov:type": [
+        {
+          "$": "wfprov:WorkflowEngine",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "prov:SoftwareAgent",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "prov:label": "cwltool 3.1.20240708091337"
+    }
+  },
+  "wasStartedBy": {
+    "_:id1": {
+      "prov:activity": "id:c8b5703d-ad68-440a-96bc-b729fbcb21f2",
+      "prov:starter": "id:24e42ee4-9a2d-4603-8d1b-cdb3e4f4d381",
+      "prov:time": "2025-01-09T07:55:25.005244"
+    },
+    "_:id3": {
+      "prov:activity": "id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06",
+      "prov:starter": "id:c8b5703d-ad68-440a-96bc-b729fbcb21f2",
+      "prov:time": "2025-01-09T07:55:25.005336"
+    },
+    "_:id9": {
+      "prov:activity": "id:6125c404-ad9c-4023-a3d7-7a582355cdf5",
+      "prov:starter": "id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06",
+      "prov:time": "2025-01-09T07:55:25.035375"
+    },
+    "_:id18": {
+      "prov:activity": "id:ea3f0160-b1d6-4528-82fb-c8100114869a",
+      "prov:starter": "id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06",
+      "prov:time": "2025-01-09T07:55:25.336317"
+    }
+  },
+  "activity": {
+    "id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06": {
+      "prov:startTime": "2025-01-09T07:55:25.005274",
+      "prov:type": {
+        "$": "wfprov:WorkflowRun",
+        "type": "prov:QUALIFIED_NAME"
+      },
+      "prov:label": "Run of workflow/packed.cwl#main"
+    },
+    "id:6125c404-ad9c-4023-a3d7-7a582355cdf5": {
+      "prov:type": {
+        "$": "wfprov:ProcessRun",
+        "type": "prov:QUALIFIED_NAME"
+      },
+      "prov:label": "Run of workflow/packed.cwl#main/calculation"
+    },
+    "id:ea3f0160-b1d6-4528-82fb-c8100114869a": {
+      "prov:type": {
+        "$": "wfprov:ProcessRun",
+        "type": "prov:QUALIFIED_NAME"
+      },
+      "prov:label": "Run of workflow/packed.cwl#main/plot"
+    }
+  },
+  "wasAssociatedWith": {
+    "_:id2": {
+      "prov:activity": "id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06",
+      "prov:agent": "id:c8b5703d-ad68-440a-96bc-b729fbcb21f2",
+      "prov:plan": "wf:main"
+    },
+    "_:id8": {
+      "prov:activity": "id:6125c404-ad9c-4023-a3d7-7a582355cdf5",
+      "prov:agent": "id:c8b5703d-ad68-440a-96bc-b729fbcb21f2",
+      "prov:plan": "wf:main/calculation"
+    },
+    "_:id17": {
+      "prov:activity": "id:ea3f0160-b1d6-4528-82fb-c8100114869a",
+      "prov:agent": "id:c8b5703d-ad68-440a-96bc-b729fbcb21f2",
+      "prov:plan": "wf:main/plot"
+    }
+  },
+  "entity": {
+    "wf:main": [
+      {
+        "prov:type": [
+          {
+            "$": "prov:Plan",
+            "type": "prov:QUALIFIED_NAME"
+          },
+          {
+            "$": "wfdesc:Workflow",
+            "type": "prov:QUALIFIED_NAME"
+          }
+        ],
+        "prov:label": "Prospective provenance"
+      },
+      {
+        "wfdesc:hasSubProcess": {
+          "$": "wf:main/plot",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        "prov:label": "Prospective provenance"
+      },
+      {
+        "wfdesc:hasSubProcess": {
+          "$": "wf:main/calculation",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        "prov:label": "Prospective provenance"
+      }
+    ],
+    "wf:main/plot": {
+      "prov:type": [
+        {
+          "$": "wfdesc:Process",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "prov:Plan",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ]
+    },
+    "wf:main/calculation": {
+      "prov:type": [
+        {
+          "$": "wfdesc:Process",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "prov:Plan",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ]
+    },
+    "data:e127d38db33186883b2508127a32058068978e19": [
+      {
+        "prov:type": {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      },
+      {
+        "prov:type": {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      }
+    ],
+    "id:822a372a-ef3e-44e6-a7ed-eabd663da79e": {
+      "prov:type": [
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "speakers_revised.csv",
+      "cwlprov:nameroot": "speakers_revised",
+      "cwlprov:nameext": ".csv"
+    },
+    "data:84b9f7c851521b1396f1ff2dd45e7d88e8803b1f": [
+      {
+        "prov:type": {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      },
+      {
+        "prov:type": {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      }
+    ],
+    "id:59268825-c83d-4c38-888e-e3ced0adc12b": {
+      "prov:type": [
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "population.csv",
+      "cwlprov:nameroot": "population",
+      "cwlprov:nameext": ".csv"
+    },
+    "id:cffa36a3-a299-434d-aca2-94460ab35346": {
+      "prov:type": [
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "population.csv",
+      "cwlprov:nameroot": "population",
+      "cwlprov:nameext": ".csv"
+    },
+    "id:e40b061c-ac6a-4b54-a924-74108ba3b7e9": {
+      "prov:type": [
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "speakers_revised.csv",
+      "cwlprov:nameroot": "speakers_revised",
+      "cwlprov:nameext": ".csv"
+    },
+    "data:0bbffc95ebeeb5d045800be5f313fdc7e96c6364": {
+      "prov:type": {
+        "$": "wfprov:Artifact",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "id:2627c279-cf73-4d33-8412-91f476345eb8": {
+      "prov:type": [
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "results.csv",
+      "cwlprov:nameroot": "results",
+      "cwlprov:nameext": ".csv"
+    },
+    "data:1c8014753e14c8a9086cef3cd0e5fa363ab53809": {
+      "prov:type": {
+        "$": "wfprov:Artifact",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "id:8b6dcc34-63d7-469a-bef7-5c0b7cdf7980": {
+      "prov:type": [
+        {
+          "$": "wfprov:Artifact",
+          "type": "prov:QUALIFIED_NAME"
+        },
+        {
+          "$": "wf4ever:File",
+          "type": "prov:QUALIFIED_NAME"
+        }
+      ],
+      "cwlprov:basename": "results.svg",
+      "cwlprov:nameroot": "results",
+      "cwlprov:nameext": ".svg"
+    }
+  },
+  "specializationOf": {
+    "_:id4": {
+      "prov:specificEntity": "id:822a372a-ef3e-44e6-a7ed-eabd663da79e",
+      "prov:generalEntity": "data:e127d38db33186883b2508127a32058068978e19"
+    },
+    "_:id6": {
+      "prov:specificEntity": "id:59268825-c83d-4c38-888e-e3ced0adc12b",
+      "prov:generalEntity": "data:84b9f7c851521b1396f1ff2dd45e7d88e8803b1f"
+    },
+    "_:id10": {
+      "prov:specificEntity": "id:cffa36a3-a299-434d-aca2-94460ab35346",
+      "prov:generalEntity": "data:84b9f7c851521b1396f1ff2dd45e7d88e8803b1f"
+    },
+    "_:id12": {
+      "prov:specificEntity": "id:e40b061c-ac6a-4b54-a924-74108ba3b7e9",
+      "prov:generalEntity": "data:e127d38db33186883b2508127a32058068978e19"
+    },
+    "_:id14": {
+      "prov:specificEntity": "id:2627c279-cf73-4d33-8412-91f476345eb8",
+      "prov:generalEntity": "data:0bbffc95ebeeb5d045800be5f313fdc7e96c6364"
+    },
+    "_:id20": {
+      "prov:specificEntity": "id:8b6dcc34-63d7-469a-bef7-5c0b7cdf7980",
+      "prov:generalEntity": "data:1c8014753e14c8a9086cef3cd0e5fa363ab53809"
+    }
+  },
+  "used": {
+    "_:id5": {
+      "prov:activity": "id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06",
+      "prov:entity": "id:822a372a-ef3e-44e6-a7ed-eabd663da79e",
+      "prov:time": "2025-01-09T07:55:25.032045",
+      "prov:role": {
+        "$": "wf:main/speakers",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id7": {
+      "prov:activity": "id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06",
+      "prov:entity": "id:59268825-c83d-4c38-888e-e3ced0adc12b",
+      "prov:time": "2025-01-09T07:55:25.032424",
+      "prov:role": {
+        "$": "wf:main/population",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id11": {
+      "prov:activity": "id:6125c404-ad9c-4023-a3d7-7a582355cdf5",
+      "prov:entity": "id:cffa36a3-a299-434d-aca2-94460ab35346",
+      "prov:time": "2025-01-09T07:55:25.036178",
+      "prov:role": {
+        "$": "wf:main/calculation/population",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id13": {
+      "prov:activity": "id:6125c404-ad9c-4023-a3d7-7a582355cdf5",
+      "prov:entity": "id:e40b061c-ac6a-4b54-a924-74108ba3b7e9",
+      "prov:time": "2025-01-09T07:55:25.036540",
+      "prov:role": {
+        "$": "wf:main/calculation/speakers",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id19": {
+      "prov:activity": "id:ea3f0160-b1d6-4528-82fb-c8100114869a",
+      "prov:entity": "id:2627c279-cf73-4d33-8412-91f476345eb8",
+      "prov:time": "2025-01-09T07:55:25.336768",
+      "prov:role": {
+        "$": "wf:main/plot/results",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    }
+  },
+  "wasGeneratedBy": {
+    "_:id15": {
+      "prov:entity": "id:2627c279-cf73-4d33-8412-91f476345eb8",
+      "prov:activity": "id:6125c404-ad9c-4023-a3d7-7a582355cdf5",
+      "prov:time": "2025-01-09T07:55:25.332417",
+      "prov:role": {
+        "$": "wf:main/calculation/results",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id21": {
+      "prov:entity": "id:8b6dcc34-63d7-469a-bef7-5c0b7cdf7980",
+      "prov:activity": "id:ea3f0160-b1d6-4528-82fb-c8100114869a",
+      "prov:time": "2025-01-09T07:55:26.832870",
+      "prov:role": {
+        "$": "wf:main/plot/results",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    },
+    "_:id23": {
+      "prov:entity": "id:8b6dcc34-63d7-469a-bef7-5c0b7cdf7980",
+      "prov:activity": "id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06",
+      "prov:time": "2025-01-09T07:55:26.835320",
+      "prov:role": {
+        "$": "wf:main/primary/out",
+        "type": "prov:QUALIFIED_NAME"
+      }
+    }
+  },
+  "wasEndedBy": {
+    "_:id16": {
+      "prov:activity": "id:6125c404-ad9c-4023-a3d7-7a582355cdf5",
+      "prov:ender": "id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06",
+      "prov:time": "2025-01-09T07:55:25.332411"
+    },
+    "_:id22": {
+      "prov:activity": "id:ea3f0160-b1d6-4528-82fb-c8100114869a",
+      "prov:ender": "id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06",
+      "prov:time": "2025-01-09T07:55:26.832864"
+    },
+    "_:id24": {
+      "prov:activity": "id:6f892a35-09fe-4fc1-a6dc-2a69fd79dd06",
+      "prov:ender": "id:c8b5703d-ad68-440a-96bc-b729fbcb21f2",
+      "prov:time": "2025-01-09T07:55:26.835383"
+    }
+  }
+}

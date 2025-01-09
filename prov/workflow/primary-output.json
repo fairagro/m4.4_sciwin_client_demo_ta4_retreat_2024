@@ -1,0 +1,13 @@
+{
+    "out": {
+        "location": "../data/1c/1c8014753e14c8a9086cef3cd0e5fa363ab53809",
+        "basename": "results.svg",
+        "nameroot": "results",
+        "nameext": ".svg",
+        "class": "File",
+        "checksum": "sha1$1c8014753e14c8a9086cef3cd0e5fa363ab53809",
+        "size": 75260,
+        "http://commonwl.org/cwltool#generation": 0,
+        "@id": "urn:uuid:8b6dcc34-63d7-469a-bef7-5c0b7cdf7980"
+    }
+}
