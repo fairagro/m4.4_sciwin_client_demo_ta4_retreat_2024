@@ -176,8 +176,8 @@ Visualization can be made with
 cwltool --print-dot workflows/demo/demo.cwl | dot -Tsvg > workflow.svg
 ```
 
-We now have a full workflow which can be executed by cwltool
+We now have a full workflow which can be executed
 ```bash
-s4n execute local --runner cwltool workflows/demo/demo.cwl --pop population.csv --speakers speakers_revised.csv
+s4n execute local workflows/demo/demo.cwl --pop population.csv --speakers speakers_revised.csv
 ```
 or `s4n execute workflows/demo/demo.cwl --pop population.csv --speakers speakers_revised.csv` in a later stage (execution branch currently only supports commandlinetools)
