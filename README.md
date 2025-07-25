@@ -1,24 +1,8 @@
 # SciWIn-Client Demo
 This repo contains the scripts to perform a small SciWIn-Client Demo. This instructions file will be updated to use new features when they are available. The commands stated below will perform the operations based on our [hello world repo](https://github.com/fairagro/m4.4_hello_world).
 
-## Preparation and Cleanup
-To prepare the environment and to download all neccessary files you just need to execute the `Makefile` (maybe adjust `s4n` location before)
-```bash
-make
-```
-This will download all needed files from the [hello world repo](https://github.com/fairagro/m4.4_hello_world) and creates a shell script to activate environments.
-Run 'source set_env.sh' to apply the environment changes to the current shell.
-```bash
-source set_env.sh
-```
-
-To reset the directory execute the clean command which will restore the initial state.
-```bash
-make clean
-```
-
 ## Demo Commands
-To check if SciWIn is available type `s4n --version` which should output something like `s4n 0.1.0`.
+To check if SciWIn is available type `s4n --version` which should output something like `s4n 0.6.0`.
 ### Initializing a Project
 To begin the journey use `s4n init` to initialize a project in the current directory.
 ```bash
