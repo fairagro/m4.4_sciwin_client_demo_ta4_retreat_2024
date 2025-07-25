@@ -8,6 +8,12 @@ To begin the journey use `s4n init` to initialize a project in the current direc
 ```bash
 s4n init
 ```
+Create a virtual environment
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 ### Creation of CommandLineTools
 To create the two CommandLineTools needed for the demo you just have to prefix the execution commands with `s4n tool create` or `s4n run`.
 #### Calculation
