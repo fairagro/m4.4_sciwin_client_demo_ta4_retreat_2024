@@ -158,7 +158,7 @@ An example output looks like
 ##### Connecting to output
 To get the results file we will connect the result of the plot step to out.
 ```bash
-s4n workflow connect demo --from plot/results --to @outputs/out
+s4n workflow connect demo --from plot/o_results --to @outputs/out
 ```
 which outputs
 ```
